@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Credits</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1063194194279145512/1079377988317085788/xeblfkje.ico" />
+	<style>
+		body {
+			background-color: #000000;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			color: #FFFFFF;
+			margin-top: 50px;
+		}
+
+		p {
+			text-align: center;
+			color: #FFFFFF;
+			margin-bottom: 50px;
+		}
+
+		.btn-container {
+			text-align: center;
+		}
+
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 20px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		button:hover {
+			background-color: #3E8E41;
+		}
+
+		footer {
+			background-color: #333333;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 10px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Credits</h1>
+	<p>All Credits</p>
+
+	<div class="btn-container">
+		<button onclick="copyToClipboard('Appolon#2523')">Click to Copy My Discord</button>
+
+		<button onclick="window.location.href = 'https://chat.openai.com/'">80% by ChatGPT (x</button>
+	</div>
+
+	<footer onclick="window.location.href = 'https://alpractice.club/tos.html'">
+		<p>Copyright © 2023 - All Rights Reserved.</p>
+	</footer>
+
+	<script>
+		function copyToClipboard(text) {
+		  var input = document.createElement('textarea');
+		  input.innerHTML = text;
+		  document.body.appendChild(input);
+		  input.select();
+		  var result = document.execCommand('copy');
+		  document.body.removeChild(input);
+		  alert("Copied Appolon#2523 to clipboard!");
+		}
+	</script>
+
+</body>
+</html>
