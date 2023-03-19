@@ -14,38 +14,14 @@
 	<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1063194194279145512/1079377988317085788/xeblfkje.ico" type="image/x-icon">
   <script>
 
+const titles = [  "Appolon.dev",  "Appolon.de",  "Appolon.d",  "Appolon.",  "Appolon",  "Appolo",  "Appol",  "Appo",  "App",  "Ap",  "A",  "Ap",  "App",  "Appo",  "Appol",  "Appolo",  "Appolon",  "Appolon.",  "Appolon.d",  "Appolon.de",  "Appolon.dev",];
 
-const titles = [
-  "Appolon.dev",
-  "Appolon.de",
-  "Appolon.d",
-  "Appolon.",
-  "Appolon",
-  "Appolo",
-  "Appol",
-  "Appo",
-  "App",
-  "Ap",
-  "A",
-  "Ap",
-  "App",
-  "Appo",
-  "Appol",
-  "Appolo",
-  "Appolon",
-  "Appolon.",
-  "Appolon.d",
-  "Appolon.de",
-  "Appolon.dev",
-];
-
-let delay = 0;
-titles.forEach((title) => {
+for (let i = 0; i < titles.length; i++) {
   setTimeout(() => {
-    document.title = title;
-  }, delay);
-  delay += 100;
-});
+    document.title = titles[i];
+  }, i * 100);
+}
+
 
 
 						   
