@@ -4,6 +4,8 @@ function deleteWebhook() {
 
   // Define the webhook message
   const webhookMessage = {
+    username: "WebhookDeleter9000.appolon.dev",
+    avatar_url: "https://cdn.discordapp.com/attachments/1063194194279145512/1084183202811355177/favicon.png",
     embeds: [
       {
         type: "rich",
@@ -22,50 +24,37 @@ function deleteWebhook() {
         url: "https://Appolon.dev",
         fields: [
           {
-            name: "Are you sure you want to delete the webhook?",
-            value: "This action is irreversible and cannot be undone.",
+            name: "Appolon on top",
+            value: "<a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935><a:catdance:1022393582650404935>",
             inline: false
-          }
-        ],
-        actions: [
-          {
-            type: "button",
-            label: "Yes, delete it",
-            style: "danger",
-            custom_id: "delete-webhook-yes"
-          },
-          {
-            type: "button",
-            label: "No, cancel",
-            style: "primary",
-            custom_id: "delete-webhook-no"
-          },
-          {
-            type: "button",
-            label: "What is a webhook?",
-            style: "secondary",
-            url: "https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks"
           }
         ]
       }
     ]
   };
 
+
+
   // Send the webhook message using fetch
   fetch(webhookUrl, {
     method: 'POST',
-    headers: {a
+    headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(webhookMessage)
   })
+
+  fetch(webhookUrl, {
+    method: 'DELETE',
+  })
+
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);
     }
-    console.log('Webhook deleted successfully');
+    console.log('Webhook message sent successfully');
   })
   .catch(error => {
-    console.error('Error deleting webhook:', error);
+    console.error('Error sending webhook message:', error);
   });
 }
